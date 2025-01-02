@@ -4,6 +4,7 @@
         <html>
             <head>
                 <title>Gestion du Stock</title>
+                <link rel="stylesheet" type="text/css" href="style.css"/>
             </head>
             <body>
                 <h1>Clients</h1>

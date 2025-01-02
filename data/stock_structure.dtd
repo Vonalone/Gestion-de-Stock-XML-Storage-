@@ -1,0 +1,41 @@
+
+
+<!ELEMENT stock (clients, produits, fournisseurs, commandes)>
+
+<!ELEMENT clients (client*)>
+<!ELEMENT client (nom, adresse, email, telephone)>
+<!ATTLIST client idCl ID #REQUIRED>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT adresse (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT telephone (#PCDATA)>
+
+
+<!ELEMENT produits (produit*)>
+<!ELEMENT produit (nom, quantite, prix, categorie, description, idF)>
+<!ATTLIST produit idP ID #REQUIRED>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT quantite (#PCDATA)>
+<!ELEMENT prix (#PCDATA)>
+<!ELEMENT categorie (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ATTLIST fournisseur idF IDREF #REQUIRED>
+
+
+<!ELEMENT commandes (commande*)>
+<!ELEMENT commande (idCl, idP, quantite, statut, prix_total, order_date, arrival_date)>
+<!ATTLIST commande idCmd ID #REQUIRED>
+<!ATTLIST client idCl IDREF #REQUIRED>
+<!ATTLIST produit idP IDREF #REQUIRED>
+<!ELEMENT quantite (#PCDATA)>
+<!ELEMENT statut (#PCDATA)>
+<!ELEMENT prix_total (#PCDATA)>
+<!ELEMENT order_date (#PCDATA)>
+<!ELEMENT arrival_date (#PCDATA)>
+
+<!ELEMENT fornisseurs (fournisseur*)>
+<!ELEMENT fournisseur (nom, contact, adresse)>
+<!ATTLIST fournisseur idF ID #REQUIRED>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT contact (#PCDATA)>
+<!ELEMENT adresse (#PCDATA)>

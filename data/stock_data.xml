@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE stock SYSTEM "stock_structure.dtd">
+
+<?xml-stylesheet type = "text/xsl" href = "stock_presentation.xsl"?> 
+
+<stock>
+    <clients>
+        <client>
+            <idCl>1</idCl>
+            <nom>Jean Dupont</nom>
+            <adresse>123 Rue Principale</adresse>
+            <email>jean.dupont@example.com</email>
+            <telephone>0123456789</telephone>
+        </client>
+    </clients>
+    <produits>
+        <produit>
+            <idP>201</idP>
+            <nom>Stylo</nom>
+            <quantite>100</quantite>
+            <prix>25.00</prix>
+            <categorie>Bureautique</categorie>
+            <description>Stylo bille bleu</description>
+            <idF>301</idF>
+        </produit>
+    </produits>
+    <commandes>
+        <commande>
+            <idCmd>101</idCmd>
+            <idCl>1</idCl>
+            <idP>201</idP>
+            <quantite>2</quantite>
+            <statut>Livré</statut>
+            <prix_total>50.00</prix_total>
+            <order_date>2025-01-01</order_date>
+            <arrival_date>2025-01-05</arrival_date>
+        </commande>
+    </commandes>
+    <fournisseurs>
+        <fournisseur>
+            <idF>301</idF>
+            <nom>FourniturePro</nom>
+            <contact>contact@fourniturepro.com</contact>
+            <adresse>456 Avenue Industrielle</adresse>
+        </fournisseur>
+    </fournisseurs>
+</stock>
